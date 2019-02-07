@@ -52,3 +52,22 @@ class Queue:
     
   def is_empty(self):
     return self.size == 0
+  
+  
+print("Creating a deli line \n------------")
+deli_line = Queue(5)
+print("Adding orders \n------------")
+deli_line.enqueue("egg")
+deli_line.enqueue("bacon")
+deli_line.enqueue("toasted sesame bagel")
+deli_line.enqueue("cheese")
+deli_line.enqueue("fries and ketchup")
+
+
+print("------------\nOur first order will be " + deli_line.peek()) # Our first order will be egg
+print("------------\nNow serving...\n------------")
+deli_line.dequeue()
+deli_line.dequeue()
+deli_line.dequeue()
+deli_line.dequeue()
+deli_line.dequeue()
