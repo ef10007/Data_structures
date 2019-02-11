@@ -31,8 +31,9 @@ root.add_child(first_child) #Adding Vice-President
 root.add_child(second_child) #Adding Head of Marketing
 second_child.add_child(third_child) #Adding Marketing Assistant
 
-root.traverse() #Traversing...
-CEO
-Head of Marketing
-Marketing Assistant
-Vice-President
+root.traverse() 
+#Traversing...
+#CEO
+#Head of Marketing
+#Marketing Assistant
+#Vice-President
