@@ -21,6 +21,7 @@ class TreeNode:
       current_node = nodes_to_visit.pop()
       print(current_node.value)
       nodes_to_visit += current_node.children
+      
 
 root = TreeNode("CEO")
 first_child = TreeNode("Vice-President")
@@ -37,3 +38,12 @@ root.traverse()
 #Head of Marketing
 #Marketing Assistant
 #Vice-President
+
+root.remove_child(second_child) #Removing Head of Marketing from CEO
+root.traverse()
+#Traversing...
+#CEO
+#Vice-President
+
+
+
