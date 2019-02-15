@@ -28,8 +28,14 @@ class MinHeap:
     self.count -= 1 # decrementing the count by 1
     
     print("Last element moved to first: {0}".format(self.heap_list))
+    self.heapify_down()
     return min
   
+  def heapify_down(self):
+      print("Heapifying down!")
+      self.idx = 1
+    
+    
   def add(self, element):
     self.count += 1 # incrementing the element count in heap_list
     print("Adding: {0} to {1}".format(element, self.heap_list))
