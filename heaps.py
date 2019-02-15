@@ -12,6 +12,9 @@ class MinHeap:
 
   def right_child_idx(self, idx):
     return idx * 2 + 1
+  
+  def child_present(self, idx):
+    return self.left_child_idx(idx) <= self.count
   # END OF HEAP HELPER METHODS
 
   
@@ -35,6 +38,12 @@ class MinHeap:
       print("Heapifying down!")
       idx = 1
     
+  def add(self, element):
+    self.count += 1 # incrementing the element count in heap_list
+    print("Adding: {0} to {1}".format(element, self.heap_list))
+    self.heap_list.append(element)
+    self.heapify_up()
+    
   def get_smaller_child_idx(self, idx):
     
     if self.right_child_idx(idx) > self.count: # there's no right child for this idx
@@ -51,12 +60,7 @@ class MinHeap:
       else:
         print("Right child is smaller")
         return self.right_child_idx(idx)
-      
-  def add(self, element):
-    self.count += 1 # incrementing the element count in heap_list
-    print("Adding: {0} to {1}".format(element, self.heap_list))
-    self.heap_list.append(element)
-    self.heapify_up()
+  
     
   def heapify_up(self):
     print("Heapifying up")
@@ -81,7 +85,34 @@ class MinHeap:
         
       idx = self.parent_idx(idx) # setting idx to be the index of its parent
     print("HEAP RESTORED! {0}".format(self.heap_list))
-    print("")  
+    print("") 
+    
+    element_count = len(self.heap_list)
+    if element_count > 10000:
+      print("Heap of {0} elements restored with {1} swaps"
+            .format(element_count, swap_count))
+      print("")
+      
+    
+    def heapify_down(self):
+      idx = 1
+      # starts at 1 because we swapped first and last elements
+      swap_count = 1
+      
+      while self.child_present(idx): # while idx has a child element
+        smaller_child_idx = self.get_smaller_child_idx(idx)
+        if self.heap_list[idx] > self.heap_list[smaller_child_idx]:
+          swap_count += 1
+          tmp = self.heap_list[smaller_child_idx]
+          self.heap_list[smaller_child_idx] = self.heap_list[idx]
+          self.heap_list[idx] = tmp
+        idx = smaller_child_idx
+
+      element_count = len(self.heap_list)
+      if element_count >= 10000:
+        print("Heap of {0} elements restored with {1} swaps"
+              .format(element_count, swap_count))
+        print("")  
 
     
 min_heap = MinHeap()
@@ -103,3 +134,19 @@ min_heap.add(42)
 
 # remove minimum element
 print(min_heap.retrieve_min())
+
+# populate min_heap with descending numbers
+descending_nums = [n for n in range(10001, 1, -1)]
+print("ADDING!")
+for el in descending_nums:
+  min_heap.add(el)
+#ADDING!
+#Heap of 10001 elements restored with 13 swaps  
+  
+
+print("REMOVING!")
+# remove minimum until min_heap is empty
+min_heap.retrieve_min()
+#REMOVING!
+#Heap of 10000 elements restored with 13 swaps
+
