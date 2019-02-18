@@ -20,12 +20,12 @@ class Graph: # stores all the vertices
   def add_vertex(self, vertex): # adding a new vertex to its collection
     self.graph_dict[vertex.value] = vertex
 
-  def add_edge(self, from_vertex, to_vertex, weight = 0): # adding a new edge between stored vertices
+  def add_edge(self, from_vertex, to_vertex, weight = 0): # This method sets an edge between two vertices.
     self.graph_dict[from_vertex.value].add_edge(to_vertex.value, weight)
     if not self.directed:
       self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
 
-  def find_path(self, start_vertex, end_vertex): # whether a path exist between stored vertices
+  def find_path(self, start_vertex, end_vertex): # This method will return True or False depending on whether a path exists between from_node and to_node.
     start = [start_vertex] # The list start is to keep track of the vertices as we search
     seen = {} # a dictionary to track which vertices we've already visited
     
