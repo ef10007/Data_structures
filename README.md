@@ -29,3 +29,7 @@ Graphs are ideal for keeping track of various pathways between nodes. If you're 
 7. Trees
 
 Trees are ideal for modeling hierarchical relationships, making them ideally suited for modeling the control flow of possible moves given a limited number of choices. For example, assume that you are building a tic-tac-toe game so that a player can play against the computer. In order to do this, you need the game to keep track of possible moves given different player choices and with the trees structure, the computer can use a tree to branch to its next move, depending on the player’s move.
+
+8. Nodes
+
+Nodes contain data, which can be a variety of data types and links to other nodes. If a node has no links, or they are all null, you have reached the end of the path you were following returning 'None'. It can be orphaned if there are no existing links to them. For instance, consider the following nodes and links: a -> n -> t. If you want to remove node n, but preserve node t, you can do this by changing the link on a to point to t using a.set_link_node(t).
