@@ -10,13 +10,22 @@ Queues follow a FIFO (first in, first out) protocol, making them ideally suited 
 
 3. Linked lists 
 
-Linked lists are helpful in situations where you need to traverse a list or add to the end. If you've decided to build your own music playlist command line program, you may want to be able to select songs that starting with the first, add a new song to the end of the playlist and most importantly, skip to the next song. Stacks follow a LIFO (last in, first out) protocol and do not allow you to traverse a list. Therefore, you would model our playlist with a linked list and traverse the nodes to move to the next song. We can also enqueue() a song to the end of the playlist.
+Linked lists are helpful in situations where you need to traverse a list or add to the end. If you've decided to build your own music playlist command line program, you may want to be able to select songs that starting with the first, add a new song to the end of the playlist and most importantly, skip to the next song. Stacks do not allow you to traverse a list. Therefore, you would model our playlist with a linked list and traverse the nodes to move to the next song. We can also enqueue() a song to the end of the playlist.
  
 4. Stacks
 
-When you've been asked to add "undo" functionality to a custom text editor, . Which data structure would be ideally suited to implement this feature?
+Stacks follow a LIFO (last in, first out) protocol. When you've been asked to add "undo" functionality to a custom text editor, it would be ideally suited to implement this feature. The last change added should be the first change removed for an undo functionality.
 
 
+5. Hash tables
+
+Hash tables are ideal for assigning and retrieving data in the fastest way possible, not for tracking the most recently added item. For example, if you are building an application that needs to keep track of each user's permissions, you can map each user_id to either True or False in the Hash table for each given permission respectively. It allows you to add and retrieve user permissions by user_id.
 
 
-Hash tables are ideal for assigning and retrieving data in the fastest way possible, not for tracking the most recently added item.
+6. Graphs
+
+Graphs are ideal for keeping track of various pathways between nodes. If you're helping an airline keep track of its various flight paths, as well as connecting flights available, you want to model this using a data structure that will allow you to introduce additional airports as the airline gets set up in new cities. The airline's flight paths can be modeled by a graph with the airports as vertices and the flights as edges.
+
+7. Trees
+
+Trees are ideal for modeling hierarchical relationships, making them ideally suited for modeling the control flow of possible moves given a limited number of choices. For example, assume that you are building a tic-tac-toe game so that a player can play against the computer. In order to do this, you need the game to keep track of possible moves given different player choices and with the trees structure, the computer can use a tree to branch to its next move, depending on the player’s move.
