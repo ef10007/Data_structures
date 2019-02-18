@@ -26,20 +26,33 @@ class Graph: # stores all the vertices
       self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
 
   def find_path(self, start_vertex, end_vertex): # whether a path exist between stored vertices
-    start = [start_vertex]
-    seen = {}
+    start = [start_vertex] # The list start is to keep track of the vertices as we search
+    seen = {} # a dictionary to track which vertices we've already visited
+    
     while len(start) > 0:
+      
       current_vertex = start.pop(0)
-      seen[current_vertex] = True
+      seen[current_vertex] = True # Updating the seen dictionary that we've visited current_vertex
+      
       print("Visiting " + current_vertex)
       if current_vertex == end_vertex:
         return True
       else:
         vertices_to_visit = set(self.graph_dict[current_vertex].edges.keys())
-        start += [vertex for vertex in vertices_to_visit if vertex not in seen]
+        start += [vertex for vertex in vertices_to_visit if vertex not in seen]  # Filterinf next_vertices so it only includes vertices NOT IN seen
     return False
 
   
+  
+
+  
+grand_central = Vertex("Grand Central Station")
+railway = Graph()
+print(railway.graph_dict) # {} empty dictionary
+railway.add_vertex(grand_central) # Adding Grand Central Station
+print(railway.graph_dict) # {'Grand Central Station': <vertex.Vertex object at 0x7f9a40655710>}
+  
+
 def print_graph(graph):
   for vertex in graph.graph_dict:
     print("")
