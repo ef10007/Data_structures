@@ -1,10 +1,10 @@
 # This page is for fundametal studying of Data structures 
 
-1. Heaps
+1. [Heaps](https://github.com/ef10007/Data_structures/blob/master/heaps.py)
 
 Heaps are suited for maintaining a list of items in order of priority. For example, if a marketing agency wants to prioritize projects that come up for higher-paying clients, it would lend itself to helping the agency achieve this by using a max-heap (opposite of min-heap) to constantly re-adjust our heap such that the highest paying client is the root of the heap.
 
-2. Queues
+2. [Queues](https://github.com/ef10007/Data_structures/blob/master/queues.py)
 
 Queues follow a FIFO (first in, first out) protocol, making them ideally suited to help a customer service desk, for instance, building some software that allows representatives to reply to tickets in the order they are received. Hence, the first customer ticket added will be the first one addressed.
 
