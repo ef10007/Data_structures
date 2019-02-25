@@ -24,17 +24,13 @@ print("\nThe while loop performs {0} iterations when N is 64".format(num_iterati
 runtime = "log N"
 print("\nThe runtime for this function is O({0})".format(runtime))
 
-The while loop performs 0 iterations when N is 1
 
-The while loop performs 1 iterations when N is 2
-
-The while loop performs 2 iterations when N is 4
-
-The while loop performs 5 iterations when N is 32
-
-The while loop performs 6 iterations when N is 64
-
-The runtime for this function is O(log N)
+# The while loop performs 0 iterations when N is 1
+# The while loop performs 1 iterations when N is 2
+# The while loop performs 2 iterations when N is 4
+# The while loop performs 5 iterations when N is 32
+# The while loop performs 6 iterations when N is 64
+# The runtime for this function is O(log N)
 
 
 
