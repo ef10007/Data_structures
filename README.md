@@ -36,7 +36,7 @@ Nodes contain data, which can be a variety of data types and links to other node
 
 # Asymptotic Notation
 
-Instead of timing a program, through asymptotic notation, we can calculate a program’s runtime by looking at how many instructions the computer has to perform based on the size of the program’s input: N.
+Instead of timing a program, through asymptotic notation, we can calculate a program’s runtime by looking at how many instructions the computer has to perform based on the size of the program’s input: N, positive integer.
 
 1. Big Theta (Θ)
 
@@ -46,3 +46,18 @@ Function with input that is a list of size N:
    For each value in list:
     Print the value
 ````
+
+With a list of size N, the program has a runtime of N because the program has to print a value N times. Thus, we would say the runtime is Θ(N) in this case.
+
+```
+Function that has integer input N:
+
+    Set a count variable to 0
+    
+    Loop while N is not equal to 1:
+        Increment count
+        N = N/2
+    Return count
+```
+In every case, with an integer N, the loop will iterate log2(N) times(= log(2,N) times). However, because we drop constants in asymptotic notation, we would say that the runtime of this program is Θ(log N).
+
