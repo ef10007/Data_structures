@@ -41,7 +41,7 @@ Instead of timing a program, through asymptotic notation, we can calculate a pro
 1. Big Theta (Θ)
 
 `
-Function with input that is a list of size N:
+Function with input that is a list of size N: <br />
    For each value in list:
     Print the value
 `
