@@ -63,7 +63,7 @@ In every case, with an integer N, the loop will iterate log2(N) times(= log(2,N)
 
 2. Common Runtimes
 
-Below is a list of common runtimes that run from fastest to slowest.
+ Below is a list of common runtimes that run from fastest to slowest.
 
 * Θ(1) Constant runtime. This is the runtime when a program will always do the same thing regardless of the input.
 * Θ(log N). Logarithmic runtime. Often used to search algorithms.
@@ -72,3 +72,12 @@ Below is a list of common runtimes that run from fastest to slowest.
 * Θ(N2). An example of a polynomial runtime. Often used to search through a two-dimensional dataset (like a matrix) or nested loops.
 * Θ(2N). Exponential runtime. Often used in recursive algorithms.
 * Θ(N!). Factorial runtime. Often used to generate all of the different permutations(arrangement) of something. For instance, a program that generates all the different ways to order the letters “abcd” would run in this runtime.
+
+3. Big Omega (Ω) and Big O (O)
+
+ We use big Omega(Ω) to describe the best case and big O(O) to describe the worst case.
+ ```
+ This program has a best case runtime of Θ(1) and a worst case runtime of Θ(N).
+ This program has a runtime of Ω(1) and a runtime O(N).
+ ```
+ However, presenting runtime of Θ(N) only is not true as the program does not have a linear runtime in every case, only the worst case.
