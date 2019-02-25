@@ -1,4 +1,4 @@
-# This page is for fundametal studying of Data structures 
+# Data structures 
 
 1. [Heaps](https://github.com/ef10007/Data_structures/blob/master/heaps.py)
 
@@ -33,3 +33,15 @@ Trees are ideal for modeling hierarchical relationships, making them ideally sui
 8. [Nodes](https://github.com/ef10007/Data_structures/blob/master/nodes.py)
 
 Nodes contain data, which can be a variety of data types and links to other nodes. If a node has no links, or they are all null, you have reached the end of the path you were following returning 'None'. It can be orphaned if there are no existing links to them. For instance, consider the following nodes and links: a -> n -> t. If you want to remove node n, but preserve node t, you can do this by changing the link on a to point to t using a.set_link_node(t).
+
+# Asymptotic Notation
+
+Instead of timing a program, through asymptotic notation, we can calculate a program’s runtime by looking at how many instructions the computer has to perform based on the size of the program’s input: N.
+
+1. Big Theta (Θ)
+
+'''
+Function with input that is a list of size N:
+   For each value in list:
+    Print the value
+'''
