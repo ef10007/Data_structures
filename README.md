@@ -68,8 +68,7 @@ Below is a list of common runtimes that run from fastest to slowest.
 * Θ(1) Constant runtime. This is the runtime when a program will always do the same thing regardless of the input.
 * Θ(log N). Logarithmic runtime. Often used to search algorithms.
 * Θ(N). Linear runtime. Often used when you have to iterate through an entire dataset.
-* Θ(N\*\logN). You will see this runtime in sorting algorithms.
-
-Θ(N2). This is an example of a polynomial runtime. You will see this runtime when you have to search through a two-dimensional dataset (like a matrix) or nested loops.
-Θ(2N). This is exponential runtime. You will often see this runtime in recursive algorithms (Don’t worry if you don’t know what that is yet!).
-Θ(N!). This is factorial runtime. You will often see this runtime when you have to generate all of the different permutations of something. For instance, a program that generates all the different ways to order the letters “abcd” would run in this runtime.
+* Θ(N\*logN). You will see this runtime in sorting algorithms.
+* Θ(N2). An example of a polynomial runtime. Often used to search through a two-dimensional dataset (like a matrix) or nested loops.
+* Θ(2N). Exponential runtime. Often used in recursive algorithms.
+* Θ(N!). Factorial runtime. Often used to generate all of the different permutations(arrangement) of something. For instance, a program that generates all the different ways to order the letters “abcd” would run in this runtime.
