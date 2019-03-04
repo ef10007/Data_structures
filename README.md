@@ -98,3 +98,5 @@ In every case, with an integer N, the loop will iterate log2(N) times(= log(2,N)
     Return count
  ```
  
+In the first loop, we iterate until we reach N. Thus the runtime of the first loop is linear runtime Θ(N). In other hands, the second loop runs in Logarithmic runtime Θ(log N). The overall runtime of this function will be Θ(N) + Θ(log N). However, when analyzing the runtime of a program, we only care about the slowest part of the program, hence, take a dominant term N grows much faster then log and the runtime of the function is going to be just Θ(N).
+It is also appropriate to say the runtime is O(N) because if it runs in Θ(N) for every case, then it also runs in Θ(N) for the worst case. Most of the time people will just use big O notation.
