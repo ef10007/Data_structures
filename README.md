@@ -81,3 +81,20 @@ In every case, with an integer N, the loop will iterate log2(N) times(= log(2,N)
  This program has a runtime of Ω(1) and a runtime O(N).
  ```
  However, presenting runtime of Θ(N) only is not true as the program does not have a linear runtime in every case, only the worst case.
+ 
+ 4. Adding Runtimes
+ 
+ ```
+ Function that takes a positive integer N:
+    Set a variable i equal to 1
+    Loop until i is equal to N:
+        Print i
+        Increment i
+
+    Set a count variable to 0
+    Loop while N is not equal to 1:
+        Increment count
+        N = N/2
+    Return count
+ ```
+ 
