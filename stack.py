@@ -25,8 +25,7 @@ class Stack:
       self.size -= 1 #stack size's decreased by 1
       return item_to_remove.get_value()
     else:
-      print("This stack is empty.")
-      break
+    	print("This stack is empty.")
     
   def peek(self):
     
@@ -43,5 +42,5 @@ class Stack:
     if self.size == 0:
       return True
 
-      
+s = Stack(10)    
       
