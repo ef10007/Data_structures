@@ -3,6 +3,12 @@ class Node:
         self.value = x
         self.next = None
 
+class TreeNode:
+    def __init__(self, x):
+        self.value = x
+        self.left = None
+        self.right = None
+
 class Solution():
     def __init__(self):
         self.lst = None
@@ -56,16 +62,56 @@ class Solution():
         
         while (current is not None): 
             print('current in while loop', current.value)
-            nt = current.next
+            nxt = current.next
             current.next = previous 
             previous = current 
-            current = nt
+            current = nxt
 
         self.head = previous
         print('--- After swapsies ---')
         # print('previous', previous.value)
         print('current', self.head.value)
+
+    def insert_into_tree(self, root, node):
+        # Assigning node as a root if it's not exist.
+        if root is None:
+            root = node
+
+        else:
+            # if node value is bigger than root value, it goes to the right.
+            if root.value < node.value:
+                print('Adding {} to the right node'.format(node.value))
+                if root.right is None:
+                    root.right = node
+                else:
+                    self.insert_into_tree(root.right, node)
+
+            # if node value is smaller than root value, it goes to the left.
+            else:
+                print('Adding {} to the left node'.format(node.value))
+                if root.left is None:
+                    root.left = node
+                else:
+                    self.insert_into_tree(root.left, node)
+    
+    def search_binary_search_tree(self, value):
+        """
+        Input:    4
+                /  \
+               2   7
+              / \
+             1   3
+        And the value to search: 2
         
+        Output:
+                 2     
+                / \   
+               1   3
+        """
+        if root: 
+            self.search_binary_search_tree(root.left) 
+            print(root.value) 
+            # inorder(root.right)
 
 s = Solution()
 
@@ -85,7 +131,7 @@ lst = ['J', 'i', 'n', 'n', 'y']
 # s.swap_nodes_in_pairs()
 # print(s.print_linked_list())
 
-''' Reverse Linked List '''
+# ''' Reverse Linked List '''
 # s.push_to_linked_list(5)
 # s.push_to_linked_list(4)
 # s.push_to_linked_list(3)
@@ -95,3 +141,13 @@ lst = ['J', 'i', 'n', 'n', 'y']
 
 # s.reverse_list()
 # print(s.print_linked_list())
+
+''' Binary search tree'''
+root = TreeNode(4)
+print('Root value is', root.value)
+s.insert_into_tree(root, TreeNode(2))
+s.insert_into_tree(root, TreeNode(7))
+s.insert_into_tree(root, TreeNode(1))
+s.insert_into_tree(root, TreeNode(3))
+
+s.search_binary_search_tree(2)
