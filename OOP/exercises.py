@@ -19,13 +19,41 @@ class InputOutput:
         word1 = self.inputting()
         print("And now key in another: ", end='')
         word2 = self.inputting()
-        print('You have typed:', word1 + ' ' + word2)
+        print(f'You have typed: {word1} and {word2}.')
+
 
     def string_comparison(self, first_word, second_word):
         if first_word > second_word == True:
             print('{} comes before {}'.format(first_word, second_word))
         else:
             print('{} comes before {}'.format(second_word, first_word))
+
+    def arithmetical_process(self, dividend, divisor):
+        if dividend + divisor > 100:
+            print('It exceeds 100')
+            return
+        if divisor == 0:
+            print('Cannot divide by zero')
+            return
+        quotient = round(dividend / divisor)
+        remainder = dividend % divisor
+        if remainder == 0:
+            print(f'The result is {quotient} without a remainder')
+        else:
+            print(f'The result is {quotient} with a remainder of {remainder}')
+
+    def greeting_clock(self, num):
+
+        if num > 2400 or num < 0:
+            print('Wrong input')
+        elif num > 600 and num < 960:
+            print('Morning')  
+        elif num > 1200 and num < 1360:
+            print('Afternoon')
+        elif num > 1900 and num < 2060:
+            print('Evening')
+        else:
+            print('Stay calm keep coding')
 
 if __name__ == "__main__":
     i = InputOutput()
@@ -40,3 +68,6 @@ if __name__ == "__main__":
     # i.string_comparison("Abba", "ABBA")
     # i.string_comparison("long_thing_with_a_$", "long_thing_with_a_&")
     # i.string_comparison("King@example.invalid", "King Kong")
+
+    # i.arithmetical_process(10,2)
+    # i.greeting_clock(-964)
