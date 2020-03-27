@@ -43,7 +43,6 @@ class InputOutput:
             print(f'The result is {quotient} with a remainder of {remainder}')
 
     def greeting_clock(self, num):
-
         if num > 2400 or num < 0:
             print('Wrong input')
         elif num > 600 and num < 960:
@@ -54,6 +53,31 @@ class InputOutput:
             print('Evening')
         else:
             print('Stay calm keep coding')
+
+    def squares(self):
+        num = 1
+        sqnum = 0
+        while sqnum < 100:
+            sqnum = num ** 2
+            print(sqnum)
+            num += 1
+            
+    def max_and_min(self):
+        print("Please type five numbers separated by comma: ")
+        lst = []
+        num1, num2, num3, num4, num5 = self.inputting().split(',')
+        lst.append([num1, num2, num3, num4, num5])
+        return int(max(lst[0])), int(min(lst[0]))
+
+    def booleans(self, condition):
+        if condition == True:
+            print('True')
+        else: 
+            print('False')
+        
+
+# Write a program that reads a series of numbers, ending with 0, and then tells you how many numbers you have keyed in (other than the last 0). For example, if you keyed in the numbers 5, -10, 50, 22, -945, 12, 0 it would output “You have entered 6 numbers.”.
+
 
 if __name__ == "__main__":
     i = InputOutput()
@@ -71,3 +95,15 @@ if __name__ == "__main__":
 
     # i.arithmetical_process(10,2)
     # i.greeting_clock(-964)
+    # i.squares()
+    # r = i.max_and_min()
+    # print(r)
+
+    # x = 5
+    # y = 20
+    # s = 'Birkbeck'
+    # i.booleans(x == 5 and y == 10)
+    # i.booleans(x < 0 or y > 15)
+    # i.booleans(y % x == 0 and len(s) == 8)
+    # i.booleans(s[1:3] == "Bir" or x // y > 0)
+
