@@ -75,10 +75,23 @@ class InputOutput:
         else: 
             print('False')
         
+    def series_of_nums(self):
+        total = 0
+        count = 0 
+        finished = False
+        while not finished:
+            print("Please enter a number (end with 0):")
+            s = input()
+            num = int(s)
+            if num != 0:
+                total += 1
+            elif num == 10:
+                count +=1
+            else:
+                finished = True
+        print(f'You have entered {total} numbers and 10 {count} times. ')
 
-# Write a program that reads a series of numbers, ending with 0, and then tells you how many numbers you have keyed in (other than the last 0). For example, if you keyed in the numbers 5, -10, 50, 22, -945, 12, 0 it would output “You have entered 6 numbers.”.
-
-
+ 
 if __name__ == "__main__":
     i = InputOutput()
     # ip = i.inputting()
@@ -106,4 +119,6 @@ if __name__ == "__main__":
     # i.booleans(x < 0 or y > 15)
     # i.booleans(y % x == 0 and len(s) == 8)
     # i.booleans(s[1:3] == "Bir" or x // y > 0)
+
+    i.series_of_nums()
 
