@@ -1,13 +1,19 @@
-# Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-# An input string is valid if:
-# 1. Open brackets must be closed by the same type of brackets.
-# 2. Open brackets must be closed in the correct order.
-# Note that an empty string is also considered valid.
-
-class Solution(object):
-    def isValid(self, s):
+class ValidParentheses(object):
+    def stacks(self, s):
         stack = []
+        mapping = {')':'(', ']': '[', '}':'{'}
+
+        for char in s:
+            if char in mapping: # keys = closing bracket
+                stack.pop() if stack else "empty"
+            else: # values = opening bracket
+                stack.append(char)
         
+        if len(stack) > 0:
+            return "Invalid expression"
+        else:
+            return "Valid"
         
-s = Solution()
-s.isValid('(())')
+s = ValidParentheses()
+a = s.stacks('()')
+print(a)
