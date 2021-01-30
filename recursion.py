@@ -21,6 +21,10 @@ class Solution():
         """
         self.lst = lst
         return list(reversed(lst))
+
+    def reverse_string_mutates_list(self, lst):
+        self.lst = lst
+        lst.reverse()
     
     def push_to_linked_list(self, value):
         node = Node(value)
@@ -117,8 +121,8 @@ s = Solution()
 
 ''' Reverse String '''
 lst = ['J', 'i', 'n', 'n', 'y']
-# rev = s.reverse_string(lst)
-# print(rev)
+s.reverse_string_mutates_list(lst)
+print(lst)
 
 ''' Swap Nodes in Pairs '''
 # s.push_to_linked_list(4)
@@ -142,12 +146,12 @@ lst = ['J', 'i', 'n', 'n', 'y']
 # s.reverse_list()
 # print(s.print_linked_list())
 
-''' Binary search tree'''
-root = TreeNode(4)
-print('Root value is', root.value)
-s.insert_into_tree(root, TreeNode(2))
-s.insert_into_tree(root, TreeNode(7))
-s.insert_into_tree(root, TreeNode(1))
-s.insert_into_tree(root, TreeNode(3))
+# ''' Binary search tree'''
+# root = TreeNode(4)
+# print('Root value is', root.value)
+# s.insert_into_tree(root, TreeNode(2))
+# s.insert_into_tree(root, TreeNode(7))
+# s.insert_into_tree(root, TreeNode(1))
+# s.insert_into_tree(root, TreeNode(3))
 
-s.search_binary_search_tree(2)
+# s.search_binary_search_tree(2)
